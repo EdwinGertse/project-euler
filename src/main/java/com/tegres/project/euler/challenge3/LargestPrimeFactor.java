@@ -22,9 +22,9 @@ public class LargestPrimeFactor {
      * @param numbers   collection of numbers
      * @return          largest number in collection
      */
-    public Integer largestNumber(Collection<Integer> numbers) {
+    public Long largestNumber(Collection<Long> numbers) {
         return numbers.stream()
-                .mapToInt(prime -> prime)
+                .mapToLong(prime -> prime)
                 .max()
                 .orElseThrow(NoSuchElementException::new);
     }
@@ -36,11 +36,22 @@ public class LargestPrimeFactor {
      * @return          true if a prime number
      */
     public boolean isPrimeNumber(Integer number) {
-        for(int i = 2; i <= number / 2; ++i) {
-            if(number % i == 0)
-                return true;
-        }
-        return false;
+        if (number <= 1) return false;
+
+        for (int i = 2; i < Math.sqrt(number); i++)
+            if (number % i == 0) return false;
+
+        return true;
+    }
+
+    /**
+     * Determines whether or not the number is a natural number
+     *
+     * @param number    Any given number
+     * @return          True if a Natural number
+     */
+    public boolean isNaturalNumber(Number number) {
+        return number instanceof Integer && (Integer) number > 0;
     }
 
     /**
@@ -48,13 +59,15 @@ public class LargestPrimeFactor {
      * @param number    Any given number
      * @return          Largest prime number
      */
-    public Integer retrieveLargestPrimeFactorSimple(Integer number) {
-        List<Integer> primeNumbers = new ArrayList<>();
-        for(int i = 0; i < number; i++) {
-            if (isPrimeNumber(i))
-                primeNumbers.add(i);
+    public Long retrieveLargestPrimeFactorSimple(Long number) {
+        List<Long> primeNumbers = new ArrayList<>();
+        for(int i = 2; i < number; i++) {
+            while(number % i == 0) {
+                number = number / i;
+            }
         }
-        //TODO: Determine what prime numbers makes up given number
+        if(number > 2) primeNumbers.add(number);
+
         return largestNumber(primeNumbers);
     }
 
