@@ -16,7 +16,7 @@ public class SumSquareDifference {
      * @param maxNumber     Parsed number
      * @return              Difference between sum of square and square of sum
      */
-    public static Double calculateDifference(Integer maxNumber) {
+    public Double calculateDifference(Integer maxNumber) {
         Preconditions.notNull(maxNumber, () -> "Parameter <maxNumber> should not be null");
 
         return squareOfSum(maxNumber) - sumOfSquares(maxNumber);
@@ -28,7 +28,7 @@ public class SumSquareDifference {
      * @param maxNumber     Parsed number
      * @return              sum of squares
      */
-    private static Double sumOfSquares(Integer maxNumber) {
+    public Double sumOfSquares(Integer maxNumber) {
         Preconditions.notNull(maxNumber, () -> "Parameter <maxNumber> should not be null");
 
         List<Double> multiples = new ArrayList<>();
@@ -44,7 +44,7 @@ public class SumSquareDifference {
      * @param maxNumber     Parsed number
      * @return              Square of sum
      */
-    private static Double squareOfSum(Integer maxNumber) {
+    public Double squareOfSum(Integer maxNumber) {
         Preconditions.notNull(maxNumber, () -> "Parameter <maxNumber> should not be null");
 
         return Math.pow(IntStream.rangeClosed(1, maxNumber).sum(), 2);
