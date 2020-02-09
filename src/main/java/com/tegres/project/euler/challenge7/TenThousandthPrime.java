@@ -1,5 +1,7 @@
 package com.tegres.project.euler.challenge7;
 
+import com.tegres.project.euler.common.Preconditions;
+
 /**
  * 10001st prime
  * <p>
@@ -19,6 +21,8 @@ public class TenThousandthPrime {
      * @return          true if a prime number
      */
     public boolean isPrimeNumber(Integer number) {
+        Preconditions.notNull(number,"Parameter <number> should not be null");
+
         if (number <= 1) return false;
 
         for (int i = 2; i < number; i++) {
@@ -36,6 +40,8 @@ public class TenThousandthPrime {
      * @return                  Prime number
      */
     public Integer determinePrimeNumberSimple(Integer primePosition) {
+        Preconditions.notNull(primePosition,"Parameter <primePosition> should not be null");
+
         Integer resultCount = 0, primeCount = 0;
         while (true) {
             if (isPrimeNumber(resultCount)) {
