@@ -1,7 +1,7 @@
 package com.tegres.project.euler.challenge9;
 
-import com.tegres.project.euler.common.NumberTheoryEnum;
 import com.tegres.project.euler.common.Preconditions;
+import com.tegres.project.euler.validation.RuleIsPythagoreanTripleAttributes;
 import org.mariuszgromada.math.mxparser.Argument;
 import org.mariuszgromada.math.mxparser.Function;
 
@@ -52,8 +52,6 @@ public class PythagoreanTriples {
 
     private static boolean isPythagoreanTripleAttributes(Map<String, String> PythagoreanTripleSet) {
         Collection<String> numbers = PythagoreanTripleSet.values();
-        return numbers.stream().allMatch(number -> NumberTheoryEnum.IS_NOT_NULL
-                .and(NumberTheoryEnum.IS_POSITIVE)
-                .test(Integer.parseInt(number)));
+        return new RuleIsPythagoreanTripleAttributes().evaluate(numbers);
     }
 }
