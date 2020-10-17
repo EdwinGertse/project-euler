@@ -1,4 +1,4 @@
-package com.tegres.project.euler.challenge1;
+package com.tegres.project.euler.challenges;
 
 import com.tegres.project.euler.challenges.MultiplesOf3And5;
 import org.junit.Assert;

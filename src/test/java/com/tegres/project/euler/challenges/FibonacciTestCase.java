@@ -1,4 +1,4 @@
-package com.tegres.project.euler.challenge2;
+package com.tegres.project.euler.challenges;
 
 import com.tegres.project.euler.challenges.Fibonacci;
 import org.junit.Assert;

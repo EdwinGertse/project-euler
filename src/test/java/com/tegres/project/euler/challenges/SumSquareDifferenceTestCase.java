@@ -1,7 +1,6 @@
-package com.tegres.project.euler.challenge6;
+package com.tegres.project.euler.challenges;
 
 import com.tegres.project.euler.base.AbstractTestCase;
-import com.tegres.project.euler.challenges.SumSquareDifference;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
