@@ -1,6 +1,8 @@
 package com.tegres.project.euler.challenge4;
 
 import com.tegres.project.euler.base.AbstractTestCase;
+import com.tegres.project.euler.challenges.LargestPalindromeProduct;
+import com.tegres.project.euler.domain.PalindromeProduct;
 import org.junit.Before;
 import org.junit.Test;
 

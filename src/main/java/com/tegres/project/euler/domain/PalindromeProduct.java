@@ -1,4 +1,4 @@
-package com.tegres.project.euler.challenge4;
+package com.tegres.project.euler.domain;
 
 import java.util.Objects;
 

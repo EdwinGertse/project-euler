@@ -1,4 +1,4 @@
-package com.tegres.project.euler.challenge3;
+package com.tegres.project.euler.challenges;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -27,31 +27,6 @@ public class LargestPrimeFactor {
                 .mapToLong(prime -> prime)
                 .max()
                 .orElseThrow(NoSuchElementException::new);
-    }
-
-    /**
-     * Determines if given number is a prime number
-     *
-     * @param number    Any given number
-     * @return          true if a prime number
-     */
-    public boolean isPrimeNumber(Integer number) {
-        if (number <= 1) return false;
-
-        for (int i = 2; i < Math.sqrt(number); i++)
-            if (number % i == 0) return false;
-
-        return true;
-    }
-
-    /**
-     * Determines whether or not the number is a natural number
-     *
-     * @param number    Any given number
-     * @return          True if a Natural number
-     */
-    public boolean isNaturalNumber(Number number) {
-        return number instanceof Integer && (Integer) number > 0;
     }
 
     /**

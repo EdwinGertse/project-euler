@@ -1,6 +1,7 @@
 package com.tegres.project.euler.challenge7;
 
 import com.tegres.project.euler.base.AbstractTestCase;
+import com.tegres.project.euler.challenges.TenThousandthPrime;
 import org.junit.Before;
 import org.junit.Test;
 

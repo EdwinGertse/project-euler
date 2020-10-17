@@ -1,6 +1,7 @@
 package com.tegres.project.euler.challenge10;
 
 import com.tegres.project.euler.base.AbstractTestCase;
+import com.tegres.project.euler.challenges.SummationOfPrimes;
 import org.junit.Before;
 import org.junit.Test;
 

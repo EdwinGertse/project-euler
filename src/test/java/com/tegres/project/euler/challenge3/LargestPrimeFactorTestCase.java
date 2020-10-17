@@ -1,6 +1,7 @@
 package com.tegres.project.euler.challenge3;
 
 import com.tegres.project.euler.base.AbstractTestCase;
+import com.tegres.project.euler.challenges.LargestPrimeFactor;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -37,26 +38,6 @@ public class LargestPrimeFactorTestCase extends AbstractTestCase {
     @Test
     public void givenCollection_WhenLargestNumberTest_ThenFail() {
         assertNotEquals(10L, classUnderTest.largestNumber(assembleNumberCollection()).longValue());
-    }
-
-    @Test
-    public void givenNumber_WhenPrimeNumberTest_ThenSuccess() {
-        assertTrue(classUnderTest.isPrimeNumber(IS_PRIME_NUMBER));
-    }
-
-    @Test
-    public void givenNumber_WhenPrimeNumberTest_ThenFail() {
-        assertFalse(classUnderTest.isPrimeNumber(NOT_PRIME_NUMBER));
-    }
-
-    @Test
-    public void givenNumber_WhenNaturalNumberTest_ThenSuccess() {
-        assertTrue(classUnderTest.isNaturalNumber(NATURAL_NUMBER));
-    }
-
-    @Test
-    public void givenNumber_WhenNaturalNumberTest_ThenFail() {
-        assertFalse(classUnderTest.isNaturalNumber(NON_NATURAL_NUMBER));
     }
 
     @Test

@@ -1,6 +1,7 @@
-package com.tegres.project.euler.challenge4;
+package com.tegres.project.euler.challenges;
 
 import com.tegres.project.euler.common.Preconditions;
+import com.tegres.project.euler.domain.PalindromeProduct;
 
 import java.util.Optional;
 

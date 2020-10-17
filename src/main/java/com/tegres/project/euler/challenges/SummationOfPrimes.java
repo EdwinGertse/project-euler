@@ -1,4 +1,4 @@
-package com.tegres.project.euler.challenge10;
+package com.tegres.project.euler.challenges;
 
 import com.tegres.project.euler.common.NumberUtils;
 import com.tegres.project.euler.common.Preconditions;
