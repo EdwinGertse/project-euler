@@ -1,12 +1,13 @@
 package com.tegres.project.euler.challenges;
 
 import com.tegres.project.euler.common.Preconditions;
+
 import java.math.BigInteger;
 
 /**
- * 215 = 32768 and the sum of its digits is 3 + 2 + 7 + 6 + 8 = 26.
+ * 2^15 = 32768 and the sum of its digits is 3 + 2 + 7 + 6 + 8 = 26.
  *
- * What is the sum of the digits of the number 21000?
+ * What is the sum of the digits of the number 2^1000?
  *
  * @author Edwin Gertse
  */
@@ -21,12 +22,13 @@ public class PowerDigitSum {
     }
 
     private Integer sumOfPowerDigit(BigInteger powerDigit) {
-        return String.valueOf(powerDigit).chars().sum();
+        return String.valueOf(powerDigit)
+                .chars()
+                .filter(Character::isDigit)
+                .sum();
     }
 
     private BigInteger calculatePowerDigit(Integer value, Integer powerDigit) {
-        return BigInteger.valueOf(value)
-                .pow(powerDigit)
-                .add(BigInteger.ONE);
+        return BigInteger.valueOf(value).pow(powerDigit);
     }
 }

@@ -9,7 +9,7 @@ public class PowerDigitSumTestCase {
     private PowerDigitSum classUnderTest;
     private static final Integer VALUE = 2;
     private static final Integer POWER_DIGIT = 1000;
-    private static final Integer EXPECTED = 15863;
+    private static final Integer EXPECTED = 15862;
 
     @Before
     public void setup() {
