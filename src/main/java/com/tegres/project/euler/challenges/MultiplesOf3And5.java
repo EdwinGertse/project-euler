@@ -1,6 +1,6 @@
 package com.tegres.project.euler.challenges;
 
-import com.tegres.project.euler.common.Multiples;
+import com.tegres.project.euler.common.MultiplesEnum;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,8 +19,8 @@ import java.util.Optional;
 public class MultiplesOf3And5 {
 
     private Optional<Integer> isMultipleOf(Integer number) {
-        if (Multiples.MULITPLES_OF_THREE.test(number)) return Optional.of(number);
-        else if (Multiples.MULITPLES_OF_FIVE.test(number)) return Optional.of(number);
+        if (MultiplesEnum.MULITPLES_OF_THREE.test(number)) return Optional.of(number);
+        else if (MultiplesEnum.MULITPLES_OF_FIVE.test(number)) return Optional.of(number);
         else return Optional.empty();
     }
 
