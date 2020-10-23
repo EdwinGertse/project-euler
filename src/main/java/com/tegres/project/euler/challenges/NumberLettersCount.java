@@ -23,5 +23,5 @@ public class NumberLettersCount {
 
     private Integer calculateLettersCount(String letters) {
         return letters.replaceAll("[^a-zA-Z]", "").trim().length();
-    }P
+    }
 }
