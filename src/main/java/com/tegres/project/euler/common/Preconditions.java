@@ -8,11 +8,11 @@ public final class Preconditions {
 
     private Preconditions(){}
 
-    private static void condition(boolean predicate, String message) throws PreconditionViolationException {
+    public static void condition(boolean predicate, String message) throws PreconditionViolationException {
         if(!predicate) throw new PreconditionViolationException(message);
     }
 
-    private static void condition(boolean predicate, Supplier<String> messageSupplier) throws PreconditionViolationException {
+    public static void condition(boolean predicate, Supplier<String> messageSupplier) throws PreconditionViolationException {
         if(!predicate) throw new PreconditionViolationException(messageSupplier.get());
     }
 

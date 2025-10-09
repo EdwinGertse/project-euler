@@ -3,6 +3,7 @@ package com.tegres.project.euler.challenges;
 import com.tegres.project.euler.common.Preconditions;
 import com.tegres.project.euler.common.PythagoreanTriplesFunction;
 import com.tegres.project.euler.validation.RuleIsPythagoreanTripleAttributes;
+import com.tegres.project.euler.validation.RuleIsSpecialPythagoreanTriples;
 import org.mariuszgromada.math.mxparser.Argument;
 import org.mariuszgromada.math.mxparser.Function;
 
@@ -23,15 +24,10 @@ import java.util.Map;
  */
 public class PythagoreanTriples {
 
-    public static void main(String[] args) {
-        Map<String, String> triples = constructPythagoreanTriples(4, 3);
-        System.out.println("Pythagorean Triplet: " + triples);
-        System.out.println("Is Pythagorean Triple: " + isPythagoreanTripleAttributes(triples));
-    }
-
-    private static Map<String, String> constructPythagoreanTriples(Integer param1, Integer param2) {
+    public Map<String, String> constructPythagoreanTriples(Integer param1, Integer param2) {
         Preconditions.notNull(param1, "Number <param1> should not be NULL");
         Preconditions.notNull(param2, "Number <param2> should not be NULL");
+        Preconditions.condition(param1 > param2, String.format("%s must be greater than %s", param1, param2));
 
         Argument m = new Argument("m", param1);
         Argument n = new Argument("n", param2);
@@ -44,13 +40,19 @@ public class PythagoreanTriples {
         return triples;
     }
 
-    private static String calculatePythagoreanValue(String functionName, Argument m, Argument n) {
+    public String calculatePythagoreanValue(String functionName, Argument m, Argument n) {
         Function function = new Function(functionName);
         return String.valueOf((int)function.calculate(m, n));
     }
 
-    private static boolean isPythagoreanTripleAttributes(Map<String, String> PythagoreanTripleSet) {
+    public boolean isPythagoreanTripleAttributes(Map<String, String> PythagoreanTripleSet) {
         Collection<String> numbers = PythagoreanTripleSet.values();
         return new RuleIsPythagoreanTripleAttributes().evaluate(numbers);
+    }
+
+    public boolean isSpecialPythagoreanTriples(Integer target, Map<String, String> PythagoreanTripleSet) {
+        var numbers = PythagoreanTripleSet.values();
+        var parameter = Map.of(target, numbers);
+        return new RuleIsSpecialPythagoreanTriples().evaluate(parameter);
     }
 }
