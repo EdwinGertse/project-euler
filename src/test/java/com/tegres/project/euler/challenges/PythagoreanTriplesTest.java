@@ -92,18 +92,17 @@ public class PythagoreanTriplesTest extends AbstractTestCase {
     public void testIsSpecialPythagoreanTriples_SumEqualsTarget() {
 
         Map<String, String> triple = Map.of("a", "3", "b", "4", "c", "5");
-        boolean result = pythagoreanTriples.isSpecialPythagoreanTriples(12, triple);
+        var result = pythagoreanTriples.isSpecialPythagoreanTriples(12, triple);
 
-        assertTrue(result, "Should return true when sum equals target");
+        assertEquals(60, result, "Should return product value when sum equals target");
     }
 
     @Test
     public void testIsSpecialPythagoreanTriples_SumNotEqualsTarget() {
-
         Map<String, String> triple = Map.of("a", "3", "b", "4", "c", "5");
-        boolean result = pythagoreanTriples.isSpecialPythagoreanTriples(13, triple);
+        var result = pythagoreanTriples.isSpecialPythagoreanTriples(13, triple);
 
-        assertFalse(result, "Should return false when sum doesn't equal target");
+        assertEquals(-1, result, "Should return -1 when sum doesn't equal target");
     }
 
     @Test
@@ -126,12 +125,12 @@ public class PythagoreanTriplesTest extends AbstractTestCase {
                   Integer.parseInt(triples.get("c"));
 
         // Check that isSpecialPythagoreanTriples returns true when the target equals the sum
-        boolean isSpecialTriple = pythagoreanTriples.isSpecialPythagoreanTriples(sum, triples);
-        assertTrue(isSpecialTriple, "Should return true when target equals the sum of the triple values");
+        var isSpecialTriple = pythagoreanTriples.isSpecialPythagoreanTriples(sum, triples);
+        assertEquals(12180, isSpecialTriple, "Should return product sum when target equals the sum of the triple values");
 
         // Check that isSpecialPythagoreanTriples returns false when the target doesn't equal the sum
-        boolean isNotSpecialTriple = pythagoreanTriples.isSpecialPythagoreanTriples(sum + 1, triples);
-        assertFalse(isNotSpecialTriple, "Should return false when target doesn't equal the sum of the triple values");
+        var isNotSpecialTriple = pythagoreanTriples.isSpecialPythagoreanTriples(sum + 1, triples);
+        assertEquals(-1, isNotSpecialTriple, "Should return -1 when target doesn't equal the sum of the triple values");
     }
 
     @Test

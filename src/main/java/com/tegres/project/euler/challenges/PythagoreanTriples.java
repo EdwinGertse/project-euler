@@ -52,9 +52,9 @@ public class PythagoreanTriples {
         return triples;
     }
 
-    public String calculatePythagoreanValue(String functionName, Argument m, Argument n) {
+    public String calculatePythagoreanValue(String functionName, Argument... arguments) {
         Function function = new Function(functionName);
-        return String.valueOf((int)function.calculate(m, n));
+        return String.valueOf((int)function.calculate(arguments));
     }
 
     public boolean isPythagoreanTripleAttributes(Map<String, String> PythagoreanTripleSet) {
@@ -62,7 +62,7 @@ public class PythagoreanTriples {
         return new RuleIsPythagoreanTripleAttributes().evaluate(numbers);
     }
 
-    public boolean isSpecialPythagoreanTriples(Integer target, Map<String, String> PythagoreanTripleSet) {
+    public Long isSpecialPythagoreanTriples(Integer target, Map<String, String> PythagoreanTripleSet) {
         var numbers = PythagoreanTripleSet.values();
         var parameter = Map.of(target, numbers);
         return new RuleIsSpecialPythagoreanTriples().evaluate(parameter);
