@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Map;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -131,5 +132,11 @@ public class PythagoreanTriplesTest extends AbstractTestCase {
         // Check that isSpecialPythagoreanTriples returns false when the target doesn't equal the sum
         boolean isNotSpecialTriple = pythagoreanTriples.isSpecialPythagoreanTriples(sum + 1, triples);
         assertFalse(isNotSpecialTriple, "Should return false when target doesn't equal the sum of the triple values");
+    }
+
+    @Test
+    void determineProductBasedOnGivenValue() {
+        var product = pythagoreanTriples.arithmeticPythagoreanTriples(1000);
+        assertThat(product).isEqualTo(31875000);
     }
 }
