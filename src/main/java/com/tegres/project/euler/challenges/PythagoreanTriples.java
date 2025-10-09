@@ -24,6 +24,18 @@ import java.util.Map;
  */
 public class PythagoreanTriples {
 
+    public long arithmeticPythagoreanTriples(int sum) {
+        for (int a = 1; a < sum / 3; a++) {
+            for (int b = a + 1; b < (sum - a) / 2; b++) {
+                int c = sum - a - b;
+                if (a * a + b * b == c * c) {
+                    return (long) a * b * c;
+                }
+            }
+        }
+        return -1;
+    }
+
     public Map<String, String> constructPythagoreanTriples(Integer param1, Integer param2) {
         Preconditions.notNull(param1, "Number <param1> should not be NULL");
         Preconditions.notNull(param2, "Number <param2> should not be NULL");
