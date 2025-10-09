@@ -1,9 +1,9 @@
 package com.tegres.project.euler.challenges;
 
-import com.tegres.project.euler.challenges.MultiplesOf3And5;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MultiplesOf3And5Test {
 
@@ -12,13 +12,13 @@ public class MultiplesOf3And5Test {
 
     private MultiplesOf3And5 classUnderTest;
 
-    @Before
+    @BeforeEach
     public void setup() {
         classUnderTest = new MultiplesOf3And5();
     }
 
     @Test
     public void testSumOfMultiplesOf3And5() {
-        Assert.assertEquals(EXPECTED, classUnderTest.sumOfMultiples(MAX_NUMBER));
+        assertEquals(EXPECTED, classUnderTest.sumOfMultiples(MAX_NUMBER));
     }
 }

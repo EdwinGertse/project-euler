@@ -1,9 +1,9 @@
 package com.tegres.project.euler.challenges;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class PowerDigitSumTestCase {
     private PowerDigitSum classUnderTest;
@@ -11,7 +11,7 @@ public class PowerDigitSumTestCase {
     private static final Integer POWER_DIGIT = 1000;
     private static final Integer EXPECTED = 15862;
 
-    @Before
+    @BeforeEach
     public void setup() {
         classUnderTest = new PowerDigitSum();
     }

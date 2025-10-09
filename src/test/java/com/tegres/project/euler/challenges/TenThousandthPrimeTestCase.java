@@ -1,10 +1,12 @@
 package com.tegres.project.euler.challenges;
 
 import com.tegres.project.euler.base.AbstractTestCase;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class TenThousandthPrimeTestCase extends AbstractTestCase {
 
@@ -16,7 +18,7 @@ public class TenThousandthPrimeTestCase extends AbstractTestCase {
 
     private TenThousandthPrime classUnderTest;
 
-    @Before
+    @BeforeEach
     public void setup() {
         classUnderTest = new TenThousandthPrime();
     }

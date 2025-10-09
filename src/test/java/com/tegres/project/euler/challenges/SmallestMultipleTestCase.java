@@ -1,9 +1,10 @@
 package com.tegres.project.euler.challenges;
 
 import com.tegres.project.euler.base.AbstractTestCase;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SmallestMultipleTestCase extends AbstractTestCase {
 
@@ -13,14 +14,14 @@ public class SmallestMultipleTestCase extends AbstractTestCase {
     private static Integer MAX_NUMBER = 20;
 
     private static Integer SMALLEST_MULTIPLE = 232792560;
-    @Before
+    @BeforeEach
     public void initialize() {
         classUnderTest = new SmallestMultiple();
     }
 
     @Test
     public void givenNumberRange_WhenCalculatingSmallestMultiple_ThenCorrect() {
-        Assert.assertEquals(Integer.valueOf(SMALLEST_MULTIPLE), classUnderTest.smallestMultiple(MIN_NUMBER, MAX_NUMBER));
+        assertEquals(Integer.valueOf(SMALLEST_MULTIPLE), classUnderTest.smallestMultiple(MIN_NUMBER, MAX_NUMBER));
     }
 
 }

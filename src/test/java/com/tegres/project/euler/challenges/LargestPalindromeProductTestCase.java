@@ -2,10 +2,10 @@ package com.tegres.project.euler.challenges;
 
 import com.tegres.project.euler.base.AbstractTestCase;
 import com.tegres.project.euler.domain.PalindromeProduct;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class LargestPalindromeProductTestCase extends AbstractTestCase {
 
@@ -14,7 +14,7 @@ public class LargestPalindromeProductTestCase extends AbstractTestCase {
     private static Integer HIGHEST_NUMBER = 999;
     private static final Integer PALINDROME = 580085;
 
-    @Before
+    @BeforeEach
     public void initialize() {
         classUnderTest = new LargestPalindromeProduct();
     }

@@ -1,13 +1,13 @@
 package com.tegres.project.euler.challenges;
 
 import com.tegres.project.euler.base.AbstractTestCase;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SummationOfPrimesTest extends AbstractTestCase {
 
@@ -16,7 +16,7 @@ public class SummationOfPrimesTest extends AbstractTestCase {
     private static final Integer START_NUMBER = 0;
     private static final Integer END_NUMBER = 10;
 
-    @Before
+    @BeforeEach
     public void setup() {
         classUnderTest = new SummationOfPrimes();
     }

@@ -1,7 +1,8 @@
 package com.tegres.project.euler.challenges;
 
-import org.junit.Before;
-import org.junit.Test;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -12,7 +13,7 @@ public class NumberLettersCountTestCase {
     private static final Integer END = 564;
     private static final Integer EXPECTED = 10321;
 
-    @Before
+    @BeforeEach
     public void setup() {
         classUnderTest = new NumberLettersCount();
     }

@@ -1,22 +1,9 @@
 package com.tegres.project.euler.common;
 
 import com.tegres.project.euler.base.AbstractTestCase;
-import org.junit.Ignore;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.ExpectedException;
-
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
 
 public class PreconditionsTestCase extends AbstractTestCase {
-
-    @Rule
-    public ExpectedException exception = ExpectedException.none();
-
-    @Ignore
-    public void noOp(){
-        assertTrue(true);
-    }
 
     @Test
     public void testNotNullObject() {

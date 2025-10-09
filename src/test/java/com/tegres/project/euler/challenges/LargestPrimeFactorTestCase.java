@@ -1,14 +1,16 @@
 package com.tegres.project.euler.challenges;
 
 import com.tegres.project.euler.base.AbstractTestCase;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class LargestPrimeFactorTestCase extends AbstractTestCase {
 
@@ -19,7 +21,7 @@ public class LargestPrimeFactorTestCase extends AbstractTestCase {
     private static final Integer NON_NATURAL_NUMBER = 0;
     private static final Integer NATURAL_NUMBER = 10;
 
-    @Before
+    @BeforeEach
     public void initialize() {
         classUnderTest = new LargestPrimeFactor();
     }
