@@ -23,9 +23,10 @@ public class PowerDigitSum {
 
     private Integer sumOfPowerDigit(BigInteger powerDigit) {
         return String.valueOf(powerDigit)
-                .chars()
-                .filter(Character::isDigit)
-                .sum();
+            .chars()
+            .filter(Character::isDigit)
+            .map(Character::getNumericValue)
+            .sum();
     }
 
     private BigInteger calculatePowerDigit(Integer value, Integer powerDigit) {
