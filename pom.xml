@@ -25,6 +25,7 @@
         <commons.lang.version>3.18.0</commons.lang.version>
         <mx.parser.version>6.1.0</mx.parser.version>
         <slf4j.version>2.0.17</slf4j.version>
+        <jul.slf4j.bridge.version>2.0.17</jul.slf4j.bridge.version>
     </properties>
 
     <dependencies>
@@ -54,6 +55,11 @@
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jul-to-slf4j</artifactId>
+            <version>${jul.slf4j.bridge.version}</version>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -99,6 +105,9 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${maven-surefire-plugin.version}</version>
+                <configuration>
+                    <argLine>-Djava.util.logging.config.file=${basedir}/src/test/resources/logging.properties</argLine>
+                </configuration>
             </plugin>
         </plugins>
     </build>
