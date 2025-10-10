@@ -1,5 +1,6 @@
 package com.tegres.project.euler.challenges;
 
+import org.apache.commons.lang3.tuple.Triple;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -19,12 +20,13 @@ public class PowerDigitSumTestCase {
 
     @ParameterizedTest
     @MethodSource("customParameters")
-    public void testSumOfPowerDigit(Integer value, Integer powerDigit, Integer expectedResult) {
-        assertThat(classUnderTest.execute(value, powerDigit)).isEqualTo(expectedResult);
+    public void testSumOfPowerDigit(Triple<Integer, Integer, Integer> arguments) {
+        assertThat(classUnderTest.execute(arguments.getLeft(), arguments.getMiddle()))
+            .isEqualTo(arguments.getRight());
     }
 
     private static Stream<Arguments> customParameters() {
-        return Stream.of(Arguments.of(2, 15, 26),
-            Arguments.of(2, 1000, 1366));
+        return Stream.of(Arguments.of(Triple.of( 2, 15, 26)),
+            Arguments.of(Triple.of( 2, 1000, 1366)));
     }
 }

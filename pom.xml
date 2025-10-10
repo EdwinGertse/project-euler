@@ -22,6 +22,7 @@
         <junit.version>5.14.0</junit.version>
         <assertj.version>3.27.6</assertj.version>
         <commons.io.version>2.20.0</commons.io.version>
+        <commons.lang.version>3.18.0</commons.lang.version>
         <mx.parser.version>6.1.0</mx.parser.version>
     </properties>
 
@@ -38,7 +39,11 @@
             <artifactId>commons-io</artifactId>
             <version>${commons.io.version}</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons.lang.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.mariuszgromada.math</groupId>
             <artifactId>MathParser.org-mXparser</artifactId>
