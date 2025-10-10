@@ -3,12 +3,12 @@ package com.tegres.project.euler.challenges;
 import com.tegres.project.euler.common.Preconditions;
 import com.tegres.project.euler.domain.NumberLetterRequest;
 import com.tegres.project.euler.validation.RuleNumberToLetters;
-
-import java.util.logging.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class NumberLettersCount {
 
-    private final static Logger LOGGER = Logger.getLogger(NumberLettersCount.class.getName());
+    private final static Logger LOGGER = LoggerFactory.getLogger(NumberLettersCount.class);
 
     public Integer execute(int start, int end) {
         String letters = retrieveLetters(start, end);

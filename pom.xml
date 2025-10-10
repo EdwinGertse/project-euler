@@ -24,6 +24,7 @@
         <commons.io.version>2.20.0</commons.io.version>
         <commons.lang.version>3.18.0</commons.lang.version>
         <mx.parser.version>6.1.0</mx.parser.version>
+        <slf4j.version>2.0.17</slf4j.version>
     </properties>
 
     <dependencies>
@@ -49,7 +50,11 @@
             <artifactId>MathParser.org-mXparser</artifactId>
             <version>${mx.parser.version}</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
