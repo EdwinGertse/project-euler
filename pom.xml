@@ -20,7 +20,7 @@
 
         <lombok.version>1.18.30</lombok.version>
         <junit.version>5.14.0</junit.version>
-        <assertj.version>3.27.6</assertj.version>
+        <assertj.version>3.27.7</assertj.version>
         <commons.io.version>2.20.0</commons.io.version>
         <commons.lang.version>3.18.0</commons.lang.version>
         <mx.parser.version>6.1.0</mx.parser.version>
